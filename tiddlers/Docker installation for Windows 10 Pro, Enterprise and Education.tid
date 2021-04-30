@@ -1,0 +1,19 @@
+created: 20210430165321642
+modified: 20210430170356217
+title: Docker installation for Windows 10 Pro, Enterprise and Education
+type: text/vnd.tiddlywiki
+
+follow the instructions on the Docker website for how to [[Install Docker Desktop on Windows|https://docs.docker.com/docker-for-windows/install/]]. This will require you to:
+
+* download the Docker installation package
+
+* double-click the installation package to run it
+
+* check your virtualisation settings:
+** [[enable Hyper-V settings|https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v#enable-the-hyper-v-role-through-settings]] if they are not already enabled
+
+* start the Docker application:
+** search for //Docker//, and select //Docker Desktop// in the search results.
+
+
+Once you have installed Docker, you should follow the instructions for [[Obtaining the Module VCE]].

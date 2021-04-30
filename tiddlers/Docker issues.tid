@@ -1,0 +1,24 @@
+created: 20210429194737997
+modified: 20210429202409174
+title: Docker issues
+type: text/vnd.tiddlywiki
+
+Docker issues typically occur in one of the following contexts:
+
+* installing Docker;
+* downloading an image from DockerHub;
+* creating a new containers 
+* managing or working with a pre-existing container;
+* file sharing between host and container.
+
+!! Installing Docker
+
+!! Downloading Docker Images (`docker pull`)
+
+!! Creating New Containers (`docker run`)
+
+* [[Anatomy of a `docker run` command]]
+
+!! Managing or Working with Pre-exisiting Containers (`docker start|stop|restart`)
+
+!! File sharing between host and container

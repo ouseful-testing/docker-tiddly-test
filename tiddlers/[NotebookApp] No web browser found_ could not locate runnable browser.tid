@@ -1,0 +1,14 @@
+created: 20210429192054709
+modified: 20210429192323149
+title: [NotebookApp] No web browser found: could not locate runnable browser
+type: text/vnd.tiddlywiki
+
+When running a container from the command line,  you may see a Jupyter notebook server log trace, including the message:
+
+`[NotebookApp] No web browser found: could not locate runnable browser.`
+
+The server tries to launch a browser when it starts, but the server is running //inside// the container, typically on `localhost:8888` which does not have a browser available.
+
+Instead, you access the notebooks via a browser on your //host// computer.
+
+If the Docker container is running with the suggested settings, for example, with port mapping 8129 for TM129, you should see the environment by pasting the port mapped location into the web browser address / location bar (in the case of TM129, this would be  `http://localhost:8129`).

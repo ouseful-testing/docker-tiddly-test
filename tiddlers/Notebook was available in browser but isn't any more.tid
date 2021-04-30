@@ -1,0 +1,8 @@
+created: 20210429193625049
+modified: 20210429193747541
+title: Notebook was available in browser but isn't any more
+type: text/vnd.tiddlywiki
+
+Docker is installed and the container //was// running and accessible via the browser, but now it doesn't appear to be there any more:
+
+* the container may not actually be running. For example, if you switch off or restart your computer the container may be shut down. See [[How to check a Docker container is running]]

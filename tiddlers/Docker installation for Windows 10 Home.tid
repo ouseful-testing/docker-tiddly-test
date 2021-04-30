@@ -1,0 +1,23 @@
+created: 20210430165640051
+modified: 20210430170341834
+title: Docker installation for Windows 10 Home
+type: text/vnd.tiddlywiki
+
+
+For Windows 10 Home users, follow the instructions on the Docker website for how to [[Install Docker Desktop on Windows Home|https://docs.docker.com/docker-for-windows/install-windows-home/]]. This will require you to:
+
+* [[check your version of Windows 10|https://support.microsoft.com/en-gb/help/4027391/windows-10-see-which-version-you-have]] (version 2004 or higher is required)
+* check that hardware assisted virtualisation is supported and enabled (Microsoft used to offer a ‘hardware-assisted virtualisation diagnostics tool’ to help determine your machine’s hardware but that no longer appears to be available).
+
+If virtualisation is available and not enabled, you will need to enable it. The actual approach may depend on your computer, but general guidance can be found here: [[How can I enable virtualisation (VT) on my PC?|https://support.bluestacks.com/hc/en-us/articles/115003174386-How-can-I-enable-virtualization-VT-on-my-PC-]]
+
+* download and install the [[WSL2 Linux Kernel update|https://docs.microsoft.com/en-us/windows/wsl/install-win10#step-4---download-the-linux-kernel-update-package]]
+* download the Docker installation package, double-click it and follow the installation prompts, making sure you select the `Enable WSL 2 Features` option on the //Configuration// page
+*start the Docker application:
+
+** search for //Docker//, and select //Docker Desktop// in the search results.
+
+If you are running an earlier version of Windows than Windows 10 Pro / Enterprise / Education / Home (2004+), then you may still be able to run Docker using archived versions of the now officially deprecated [[Docker Toolbox|https://docs.docker.com/toolbox/toolbox_install_windows/]].
+
+
+Once you have installed Docker, you should follow the instructions for [[Obtaining the Module VCE]].

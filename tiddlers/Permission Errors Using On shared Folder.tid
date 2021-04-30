@@ -1,0 +1,29 @@
+created: 20210429193824230
+modified: 20210429194608924
+title: Permission Errors Using On shared Folder
+type: text/vnd.tiddlywiki
+
+When trying to move or save files into the shared folder in the container or on your host computer, you may see a permissions warning in the notebooks:
+
+[img[Jupyter_notebook_permission_error.png]]
+
+Or when tryinng to copy files into the shared directory on host from the command line you see a `Permission denied` error message:
+
+[img[shared_folder_permission_error.png]]
+
+From the [[command line]] on your host computer, in any directory, run the command:
+
+`docker exec -u 0 CONTAINER_NAME chown -R jovyan /home/jovyan`
+
+using the appropriate value of `CONTAINER_NAME` for your container. For example, for TM129 and the default  recommended`tm129vce` container name, you would run:
+
+`docker exec -u 0 tm129vce chown -R jovyan /home/jovyan`
+
+This command will update the shared folder permissions.
+
+On Windows, you can alternatively try the following solution:
+
+# //right click on your 'Users' folder//
+# //Select 'give access to'//
+# //Select 'Advanced Sharing'//
+# //Go to 'Permissions', and then you can give full control to anyone.//

@@ -1,0 +1,29 @@
+created: 20210429180525921
+modified: 20210430165009003
+tags: 
+title: Getting Started
+type: text/vnd.tiddlywiki
+
+The //Open Virtual Computing Environment// uses Docker containers to make a range of preconfigured course related virtual computing environments available on your own computer.
+
+Docker allows you to run one or more virtualised environments on your computer, or even on a remote host, in an efficient and convenient way.
+
+Once you have Docker installed on your computer, you can quickly and easily download and run customised virtual machines pre-packaged with all the software required for a particular module.
+
+If you want to learn more about what Docker actually is, and how and why we're using it to support our //Open Virtual Computing Environments//, see: [[What is Docker?]]
+
+!!! How to get started with Docker...
+
+If Docker is available on your computer, you can go straight to the section [[Obtaining the Module VCE]].
+
+You can check whether you have docker installed on your computer here: [[Checking to see if Docker is already installed]].
+
+If Docker is not currently installed on your computer, you will need to install it.
+
+The installation route depends on which platform you are on:
+
+* [[Windows]]
+* [[Mac]]
+* [[Linux]]
+
+One you have installed Docker, you should follow the instructions for [[Obtaining the Module VCE]].

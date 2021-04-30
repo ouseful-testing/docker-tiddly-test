@@ -1,0 +1,13 @@
+created: 20210429180852216
+modified: 20210430170258114
+title: Windows
+type: text/vnd.tiddlywiki
+
+If Docker is not currently available on your computer ([[how to check|Checking to see if Docker is already installed]]), you will need to download and install it.
+
+* [[Docker installation for Windows 10 Pro, Enterprise and Education]] users;
+* [[Docker installation for Windows 10 Home]] users.
+
+If your computer cannot run Docker, or you have problems getting Docker working, then please contact your tutor for details of how to access an online version of the TM129 VCE.
+
+Once you have installed Docker, you should follow the instructions for [[Obtaining the Module VCE]].

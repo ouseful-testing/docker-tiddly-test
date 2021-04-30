@@ -1,0 +1,10 @@
+created: 20210430164815227
+modified: 20210430165545290
+title: Linux
+type: text/vnd.tiddlywiki
+
+If Docker is not currently available on your computer ([[how to check|Checking to see if Docker is already installed]]), you will need to download and install it.
+
+Linux users may find that Docker is already installed as part of their Linux distribution. If it is not already installed, then find the appropriate package distribution for your particular flavour of Linux from the [[Install Docker Engine|https://docs.docker.com/engine/install/]] page on the Docker website.
+
+Once you have installed Docker, you should follow the instructions for [[Obtaining the Module VCE]].

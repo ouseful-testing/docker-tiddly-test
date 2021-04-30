@@ -1,0 +1,9 @@
+created: 20210430160924498
+modified: 20210430161103586
+title: Run a Docker Container
+type: text/vnd.tiddlywiki
+
+Having pulled a Docker image, there are two ways we can run it: from the command line, or from the Docker Dashboard.
+
+* [[Run a Docker container from the command line]]
+* [[Run a Docker container from the Docker Dashboard]]

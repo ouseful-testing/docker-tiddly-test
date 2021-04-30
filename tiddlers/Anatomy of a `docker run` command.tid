@@ -1,0 +1,42 @@
+created: 20210429195615785
+modified: 20210430160912194
+title: Anatomy of a `docker run` command
+type: text/vnd.tiddlywiki
+
+To break the command down:
+
+`docker run`
+
+We want to run a docker container.
+
+`--name tm129vce`
+
+We want to call the container named `tm129vce`. Giving the container a name means we can reference the container by name when we want to start it, stop it, restart it, or delete it. Each container must have a unique name. If you try to create a new container with the same name as an pre-existing container, you need to delete the pre-existing container with the same name: `docker rm CONTAINER_NAME`. Using the `-f` flag after `docker rm` will force the container to stop, if it is running, which is required in order to delete it.
+
+`-d`
+
+Run in detached mode. If you don't use this flag the docker command will stream the output from the server log into the terminal until the container is stopped, or you `ctrl-x` to stop the command.
+
+-p 8129:8888
+
+The port mapping. Generally: `-p HOST_PORT:SERVER_PORT`. There is a network running inside the container. The notebook server publishes its service on port 8888 on the network inside the container. In order to access that service, you need to map the port onto a port on the network on the host computer (the computer that is running docker, which is to say, your "desktop"). In this case, we are saying: I want port `8129` on my host localhost network to be connected to port `8888` inside the container. You cannot start a container using a port on the host (`8129`) that is already allocated to another container. Deleting a container will free up any ports allocated to it on host. If you use `-p 8844:8888` you would access the notebook from your browser on host at `locahost:8844`
+
+`-v $pwd\:/home/jovyan/shared`
+
+A volume mount. This says: mount the directory I run this command in ($pwd, present working directory) onto the path /home/jovyan inside the container. Any files I place into this directory will appear in the /home/jovyan directory inside the container. Any files I place in the /home/jovyan directory in the cotnainer will appear in the directory mounted from host. If the container is destroyed, the files will remain on host.
+
+`-e JUPYTER_TOKEN="letmein"`
+
+Set the environment variable `JUPYTER_TOKEN` inside the container to the value letmein. When the Jupyter notebook server starts, it will set the login tokem to the same value as the `JUPYTER_TOKEN` environment variable if it has been set. (This allows you to specify an arbitrary token; it may be redundant because I think I also set it by default to letmein in the original image.
+
+`--restart always`
+
+Container restart behaviour. When your host computer is switched off, all the Docker containers are stopped and the Docker application is also shut down. The `--restart always` element will ensure that any containers that were peviously running when the Docker application was shut down are automatically restarted when the Docker application also restarts, which it should do automatically when your host computer (re)starts after being switched off.
+
+`ousefulcoursecontainers/ou-tm129:current`
+
+The image from which the container is instantiated. If the image is not locally available it will be pulled from Docker hub.
+
+`docker pull ousefulcoursecontainers/ou-tm129:current`
+
+This will pull the most recent version of the image from Docker Hub. This command can be used to update an image. Running a new container against this image will use this new image. Containers built from the original image will continue to have the original configuration. (Think of the image like a pastry cutter. A container is a biscuit cut by the shape of the cutter. If you get a new version of the cutter, the original biscuits do not suddenly take on the new shape; only newly cut biscuits will.)

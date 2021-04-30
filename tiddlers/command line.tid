@@ -1,0 +1,22 @@
+created: 20210429180829698
+modified: 20210429180831035
+title: command line
+type: text/vnd.tiddlywiki
+
+The command line, which you may also see referred to as the //command prompt// or //terminal// or (on Windows) the //PowerShell// is a text based interface from which you can run text based commands.
+
+Common commands include commands to show the current location (that is, which directory or folder we are currently working in) or list the contents of that directory (folder). We can also issue commands to change the directory location.
+
+!!! Mac / Linux command line commands
+
+* show current (present) working directory path: `pwd`
+* list contents of current directory: `ls`
+* list contents of a specified directory, given its absolute or relative path:
+  ** `cd ~/`
+  ** `cd tm129vce`
+
+!!! Windows Command Prompt
+
+!!! Windows PowerShell
+
+The command line also allows us to issue text based commands that control the behaviour 

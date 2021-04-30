@@ -1,0 +1,16 @@
+created: 20210429180714084
+modified: 20210430165449495
+title: Checking to see if Docker is already installed
+type: text/vnd.tiddlywiki
+
+You can check to see whether Docker is installed and running in the following ways:
+
+!!! Windows / Mac / Linux Command Line
+
+From the command line, run the command (in any directory): `docker -v`
+
+If Docker ''is'' installed, you will see a messaging identifying which version of Docker is available. The next step for you in the journey is: [[Obtaining the Module VCE]]
+
+If Docker ''is not'' installed, you will probably see an error message.
+
+If you do not know what the command line is but want to learn more, check here: [[command line]].

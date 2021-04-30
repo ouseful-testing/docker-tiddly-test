@@ -1,0 +1,50 @@
+created: 20210430161109487
+modified: 20210430164151742
+title: Run a Docker container from the command line
+type: text/vnd.tiddlywiki
+
+To run a VCE container from the command line, we need several pieces of information:
+
+* the name and tag of the image (`IMAGE_NAME:TAG`);
+* any //port// values published inside the container (`INTERNAL_PORT`), and against which services are running; typically, we want to make at least one port available on the //host// computer (that is, on the computer running Docker, not the environment running inside the container) so that we can access the environment running inside the container via a web browser or other user client;
+* the port value(s) on host we want to map the port(s) published inside the container onto (`HOST_PORT`); the service will then be available in your browser at the location `localhost:HOST_PORT`;
+* optionally, although strongly recommended, a name may be assigned to the container (`CONTAINER_NAME`); knowing the name of a container makes it easier to reference if we need to manage it;
+* optionally, we may want to //mount// a shared directory from a directory on the host computer (`HOST_DIR`) onto a directory //inside// the container (`INTERNAL_DIR`); a shared directory will let us pass files from the host into the container, and save files from the container back onto the host computer;
+* optionally, reset the Jupyter notebook initial login token away from it's default value (`letmein`) to a new token (`NEW_TOKEN`). 
+
+The Virtual Computing environment containers are typically defined in coventional way, so we can use the same sorts of command to set different Virtual Computing Environment containers running. Tyically, this is a command of the form:
+
+
+```
+docker run --restart always -d --rm \
+           --name CONTAINER_NAME \
+           -p HOST_PORT:INTERNAL_PORT \
+           -v "HOST_DIR:INTERNAL_DIR" \
+           -e "JUPYTER_TOKEN=NEW_TOKEN" \
+           IMAGE_NAME:TAG
+```
+
+(The `--restart always -d --rm` flags help us run the container in a "tidy" way...)
+
+For example, to run:
+
+* the container named `tm129vce`,
+* from the `ousefulcoursecontainers:current` image 
+* exposing the Jupyter notebook server running inside the container (internal port `8888`) against port `8129` on host (so we can access it on `localhost:8129`)
+* and sharing the current directory on host (`$PWD`, the directory from which we are running the `docker run` command) onto the directory `/home/jupyter/shared` inside the container
+* with a custom token (`pleaseletmein`)
+
+we would run the command:
+
+```
+docker run --restart always -d --rm \
+           --name tm129vce \
+           -p 8129:8888 \
+           -v "$PWD:/host/jovyan/shared" \
+           -e "JUPYTER_TOKEN=pleaseletmein" \
+            ousefulcoursecontainers:current 
+```
+
+
+
+See also: [[Anatomy of a `docker run` command]]

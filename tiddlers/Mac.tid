@@ -1,0 +1,16 @@
+created: 20210430164513436
+modified: 20210430170227010
+title: Mac
+type: text/vnd.tiddlywiki
+
+If Docker is not currently available on your computer ([[how to check|Checking to see if Docker is already installed]]), you will need to download and install it.
+
+Apple Mac users should follow instructions on the Docker website for how to  [[Get started with Docker Desktop on Mac|https://docs.docker.com/docker-for-mac/install/]].
+
+This will require you to:
+
+download the Docker installation package
+double-click the installation package to run it
+start the Docker application.
+
+Once you have installed Docker, you should follow the instructions for [[Obtaining the Module VCE]].

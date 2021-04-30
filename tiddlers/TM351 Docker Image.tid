@@ -1,0 +1,35 @@
+created: 20210430160713730
+modified: 20210430164306020
+title: TM351 Docker Image
+type: text/vnd.tiddlywiki
+
+For TM351,  the current image name can be found as `ousefulcoursecontainers/ou-tm351:current`.
+
+Trying to pull the image (`ousefulcoursecontainers/ou-tm351`) without specifying the tag will cause an error, because the `latest` tag will be assumed and no image exists that has been tagged in that way.
+
+Available tags are:
+
+* `current`: for the current presentation; note that if you pull the `:current` tagged image well in advance of the scheduled data for the start of the related activities in the module study calendar, you may actually retrieve the image created for the previous presentation of the course;
+* `20J`: the final release image used for the *20J* presentation;
+
+Specifically, to access the current image (bearing in mind the caveat stated above) run the command:
+
+`docker pull ousefulcoursecontainers/ou-tm351:current`
+
+
+```
+docker run --restart always -d --rm \
+           --name tm351vce \
+           -p 8351:8888 \
+           -v "$PWD:/host/jovyan/shared" \
+           -e "JUPYTER_TOKEN=pleaseletmein" \
+            ousefulcoursecontainers/ou-tm351:current
+```
+
+For further explanation, see:
+
+* [[Run a Docker container from the command line]]
+* [[Anatomy of a `docker run` command]]
+
+
+For more documentation on the TM351 VCE, see [[Inside the TM351 VCE]].
