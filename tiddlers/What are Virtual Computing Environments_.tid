@@ -1,0 +1,17 @@
+created: 20210430173018717
+modified: 20210501112323398
+tags: VCE
+title: What are Virtual Computing Environments?
+type: text/vnd.tiddlywiki
+
+ A virtual computing environment (VCE) is a self-contained computing environment that can be run on your own computer as a ‘local VCE’. Identical environments may also be available as an OU hosted environment (which we might refer to as a ‘hosted VCE’). It is also possible for you to run your own remotely hosted VCE (a ‘remote VCE’).
+
+The local VCE runs under the Docker application as a guest Linux (Ubuntu) operating system on your own computer (the host operating system). The virtual machine running inside the local VCE operates in a ‘headless’ mode (that is, without a graphical desktop interface) and runs a variety of application services. The applications are exposed as interactive, graphical web applications via an HTTP interface that you can access through a web browser running on your own host computer.
+
+The host computer can share a folder into the local VCE. The contents of this folder are visible to both the host computer and the local VCE (that is, the guest machine); they also remain visible on the host even if the guest machine is not running.
+
+The shared folder thus provides a way of passing files from your host machine into the local VCE, as well as getting files (such as backup files) out of the local VCE and onto your host computer.
+
+[img[tm129vce-image.png]]
+
+Many course related VCEs provides access from the host computer to a Jupyter notebook server — an interactive environment for writing, executing and capturing the output of Python code — that is running inside the local VCE, The notebook server is accessed via a web browser running on the host computer.

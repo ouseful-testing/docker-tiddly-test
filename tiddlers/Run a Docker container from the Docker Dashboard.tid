@@ -1,0 +1,33 @@
+created: 20210504155058651
+modified: 20210504160724195
+title: Run a Docker container from the Docker Dashboard
+type: text/vnd.tiddlywiki
+
+To run a container from the Docker Dashboard:
+
+* open the Docker Dashboard;
+* select the //Images// option;
+* find the image you downloaded for your module;
+* highlight the image and click the //Run// button that appears;
+* select the //Optional Settings//
+
+[img[docker-optiona.gif]]
+
+Configure the container using options appropriate for your module.
+
+For example, to run:
+
+ *   the container named `tm129vce`,
+ *  from the `ousefulcoursecontainers/ou-tm129:current image`
+ *  exposing the Jupyter notebook server running inside the container (internal port 8888) against port 8129 on host (so we can access it on localhost:8129)
+ *   and sharing a specified directory on host (the `TM129VCE,` folder inside the `work` folder inside your user home directory (`~`) onto the `/home/jupyter/shared` directory inside the container
+
+use the following settings:
+
+[img[docker_dashboard_container_options.png]]
+
+Click the //Run// button to create and run the container.
+
+You will be able to see services in your browser at the URL `localhost:PORT` where `PORT` is the host port value you specfied (in the above example, this would be `localhost:8129`).
+
+Alternatively, by selectig the container in the Docker Dashboard //Containers / Apps// tab, you can click the //Open I Borwser// tool icon to take you directly to the appropriate URL in your browser.

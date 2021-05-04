@@ -1,12 +1,18 @@
 created: 20210429205640489
-modified: 20210429205754319
-tags: 
+modified: 20210501112832474
+tags: Modules
 title: Module Guides
 type: text/vnd.tiddlywiki
 
 Shortcuts to VCE documentation and guides for specific module VCEs.
 
+For general guidance, see [[Obtaining a Module VCE]].
+
 //Note that these guides assume you already have Docker installed.//
 
-* [[TM129 VCE Guide]]
-* [[TM351 VCE Guide]]
+* TM129
+** [[Installing the TM129 Dockerised VCE|TM129 Docker Image]]
+** [[TM129 VCE Guide]]
+* TM351
+** [[Installing the TM351 Dockerised VCE|TM351 Docker Image]]
+** [[TM351 VCE Guide]]

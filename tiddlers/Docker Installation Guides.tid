@@ -1,0 +1,17 @@
+created: 20210430171213847
+modified: 20210501112101143
+tags: Docker
+title: Docker Installation Guides
+type: text/vnd.tiddlywiki
+
+If you do not have Docker installed on your computer ([[how to check|Checking to see if Docker is already installed]]), you will need to install it. 
+
+The Docker installation route depends on which platform you are on:
+
+* [[Windows]]
+* [[Mac]]
+* [[Linux]]
+
+For trying to resolve Docker related issues, see [[Docker issues]].
+
+One you have installed Docker, you should follow the instructions for [[Obtaining the Module VCE]].

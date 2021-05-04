@@ -1,9 +1,10 @@
 created: 20210430165321642
-modified: 20210430170356217
+modified: 20210501160400412
+tags: Docker Windows
 title: Docker installation for Windows 10 Pro, Enterprise and Education
 type: text/vnd.tiddlywiki
 
-follow the instructions on the Docker website for how to [[Install Docker Desktop on Windows|https://docs.docker.com/docker-for-windows/install/]]. This will require you to:
+Follow the instructions on the Docker website for how to [[Install Docker Desktop on Windows|https://docs.docker.com/docker-for-windows/install/]]. This will require you to:
 
 * download the Docker installation package
 
@@ -16,4 +17,4 @@ follow the instructions on the Docker website for how to [[Install Docker Deskto
 ** search for //Docker//, and select //Docker Desktop// in the search results.
 
 
-Once you have installed Docker, you should follow the instructions for [[Obtaining the Module VCE]].
+Once you have installed Docker, you should follow the instructions for [[Obtaining a Module VCE]].

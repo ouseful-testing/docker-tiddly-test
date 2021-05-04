@@ -1,8 +1,8 @@
 created: 20210430165640051
-modified: 20210430170341834
+modified: 20210501112548499
+tags: Docker Windows
 title: Docker installation for Windows 10 Home
 type: text/vnd.tiddlywiki
-
 
 For Windows 10 Home users, follow the instructions on the Docker website for how to [[Install Docker Desktop on Windows Home|https://docs.docker.com/docker-for-windows/install-windows-home/]]. This will require you to:
 
@@ -20,4 +20,4 @@ If virtualisation is available and not enabled, you will need to enable it. The 
 If you are running an earlier version of Windows than Windows 10 Pro / Enterprise / Education / Home (2004+), then you may still be able to run Docker using archived versions of the now officially deprecated [[Docker Toolbox|https://docs.docker.com/toolbox/toolbox_install_windows/]].
 
 
-Once you have installed Docker, you should follow the instructions for [[Obtaining the Module VCE]].
+Once you have installed Docker, you should follow the instructions for [[Obtaining a Module VCE]].
